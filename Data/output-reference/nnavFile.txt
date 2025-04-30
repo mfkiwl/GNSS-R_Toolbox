@@ -1,0 +1,8 @@
+..\Data\n\gbm21886.sp3
+..\Data\n\gbm21890.sp3
+..\Data\n\gbm21891.sp3
+..\Data\n\gbm21892.sp3
+..\Data\n\gbm21893.sp3
+..\Data\n\gbm21894.sp3
+..\Data\n\gbm21895.sp3
+end
