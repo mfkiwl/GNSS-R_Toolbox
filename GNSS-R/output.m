@@ -13,7 +13,7 @@ for i = 1:length(PkNoise)
     end
     if PkNoise(i) > 0
         if (PkNoise(i) > SNR_Pk2NoiseRatio(i) & Mp2SpRatio(i) > SNR_Mp2SpRatio(i)...
-                & DelTime < MaxTime & MaxHeight > RefH(i)& RefH(i) > MinHeight)
+                & DelTime < MaxTime & MaxHeight > RefH(i)& RefH(i) > MinHeight & abs(Dyn) < 2)
             fprintf(OutFileID,'%4.0f  %3.0f  %7.2f  %7.2f  %3s  %4.0f  %6.2f  %6.2f  %5.2f  %3.0f  %6.3f %6.3f %3.0f\n', ...
                 Year, Doy,RefH(i),MeanAzm,getSatName(Sat),DelTime*60, MaxEle, MinEle, MeanTime, IDofOBS, PkNoise(i),Dyn,MaskPart);
         end

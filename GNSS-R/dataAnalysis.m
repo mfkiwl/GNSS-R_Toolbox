@@ -96,7 +96,7 @@ for StationNum = 1:length(StaList)
     FinX(IDofNan) = [];
 % if 'Signal Processing Toolbox' is installed :
 %     Y = medfilt1(FinY(:,1),WinLenOfMed);
-% if 'Signal Processing Toolbox' is not installed :
+% % if 'Signal Processing Toolbox' is not installed :
     Y =  mymedfilt1(FinY(:,1),WinLenOfMed);
  %%print RH
  outdectrh = -(mean(y) - y);

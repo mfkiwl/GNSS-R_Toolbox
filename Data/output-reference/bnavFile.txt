@@ -1,8 +1,8 @@
-..\Data\n\gbm21885.sp3
-..\Data\n\gbm21886.sp3
-..\Data\n\gbm21890.sp3
-..\Data\n\gbm21891.sp3
-..\Data\n\gbm21892.sp3
-..\Data\n\gbm21893.sp3
-..\Data\n\gbm21894.sp3
+..\Data\n\gbm21872.sp3
+..\Data\n\gbm21873.sp3
+..\Data\n\gbm21874.sp3
+..\Data\n\gbm21875.sp3
+..\Data\n\gbm21876.sp3
+..\Data\n\gbm21880.sp3
+..\Data\n\gbm21881.sp3
 end

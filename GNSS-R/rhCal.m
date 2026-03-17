@@ -131,6 +131,8 @@ for FileNum=1:NumofFiles1
 %             TriObs = TripleFreqCom(C1,C2,C3,C4,C5,Sys,HalfWaveLen,SinE,PolyOrder);
             % Single frequency
             [SigObs,IonCor] =singleFreqCom(C1,C2,C3,C4,C5,P1,P2,P3,P4,P5,Sys,HalfWaveLen,SinE,PolyOrder);
+            
+            
             % Combination of Pseudorange and Carrier Phase
             % LSP
 %           %if 'Signal Processing Toolbox' is installed(which is recommended)
@@ -144,7 +146,8 @@ for FileNum=1:NumofFiles1
             [snrH] = SNRHeight(H,LSP);
 %             [Freq,TriLSP] = myLomb(TriObs,SorSinE);
 %             [TriH,TriFreq] = TriHeight(Freq,TriLSP,LineWid,Sys);
-            [SigFreq,SigLSP] = myLomb(SigObs,SorSinE);
+%             [SigFreq,SigLSP] = myLomb(SigObs,SorSinE);
+            [SigFreq,SigLSP] = LOMBNEW(SigObs,SorSinE,HalfWaveLen);
             [SigH,SigFreq] = sigHeight(SigFreq,SigLSP,LineWid,Sys,MaskPart(ArcNum));
          else
             [H,LSP] = LOMBNEW(SNRObs,SorSinE,HalfWaveLen); %

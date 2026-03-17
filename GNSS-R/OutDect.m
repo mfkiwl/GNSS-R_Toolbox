@@ -52,7 +52,7 @@ for i = 1:Num
 %           %toolboxFlag_fit = 1 : the software will call 'fit.m'
 %           %if 'Curve Fitting Toolbox' is not installed
 %           %toolboxFlag_fit = 2 : the software will run 'myFitFunctionSimple.m'
-            toolboxFlag_fit = 2 ;
+            toolboxFlag_fit = 1 ;
            if toolboxFlag_fit == 1 
                [fitresult, gof] = myFitFunction(myX(ID1), myY(ID1),len);
                FitY = fitresult(2*pi*myX(ID1));
@@ -67,6 +67,8 @@ for i = 1:Num
         Std = std(Dif);
         ID2 = find(abs(Dif)>1.95*Std);
 
+
+
 %         cftool(2*3.14*myX(ID1),myY(ID1)/(max(myY(ID1))-min(myY(ID1))));
 %         ID2 = find(IDX1 == 0);
 %         figure
@@ -80,5 +82,6 @@ for i = 1:Num
         myDynCor(ID1(ID2)) = [];
     end
     X = [X;myX];Y = [Y;myY-mean(myY)+20];type = [type;mytype];DynCor = [DynCor;myDynCor];pkn = [pkn;mypkn];
+
 end
 end
